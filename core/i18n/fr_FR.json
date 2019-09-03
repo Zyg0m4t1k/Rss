@@ -1,0 +1,35 @@
+{
+    "plugins\/rss\/desktop\/php\/rss.php": {
+        "Ajouter un flux RSS": "Ajouter un flux RSS",
+        "Rechercher": "Rechercher",
+        "Mes flux RSS": "Mes flux RSS",
+        "Général": "Général",
+        "Nom du Flux RSS": "Nom du Flux RSS",
+        "Nom de l'équipement template": "Nom de l'équipement template",
+        "Objet parent": "Objet parent",
+        "Aucun": "Aucun",
+        "Activer": "Activer",
+        "Visible": "Visible",
+        "Mode Barre d'info": "Mode Barre d'info",
+        "RSS": "RSS",
+        "Flux Jeedom": "Flux Jeedom",
+        "(Enregistrer pour voir les modifications)": "(Enregistrer pour voir les modifications)",
+        "Nom": "Nom",
+        "Lien RSS": "Lien RSS",
+        "Nombre d'article": "Nombre d'article",
+        "Action": "Action",
+        "Supprimer": "Supprimer",
+        "Sauvegarder": "Sauvegarder"
+    },
+    "plugins\/rss\/desktop\/js\/rss.js": {
+        "Nom": "Nom",
+        "lien rss": "lien rss",
+        "Activer": "Activer"
+    },
+    "plugins\/rss\/core\/class\/rss.class.php": {
+        "Jeedom Blog": "Jeedom Blog",
+        "Jeedom Market (Plugin)": "Jeedom Market (Plugin)",
+        "Jeedom Market (Widget)": "Jeedom Market (Widget)",
+        "Jeedom Market (Script)": "Jeedom Market (Script)"
+    }
+}

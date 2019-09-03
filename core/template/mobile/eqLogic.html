@@ -1,0 +1,14 @@
+<div class="eqLogic eqLogic-widget allowResize rss_feed" style="min-width:#miniwidth#;min-height:#miniheight#;width: #width#;height: #height#;" data-eqType="#eqType#" data-translate-category="#translate_category#" data-category="#category#" data-tags="#tags#" data-version="#version#" data-eqLogic_id="#id#" data-eqLogic_uid="#uid#">
+	<center class="widget-name"><a href="#eqLink#" style="font-size : 1.1em;#hideEqLogicName#">#name_display# <span class="object_name">#object_name#</span></a></center>
+    <center>  
+	<div class="list-group" style="margin:10px;z-index:10;">
+		#li#
+	</div>
+	<script type="text/javascript">
+	function open_rss#id#(lien_rss){
+	$('#md_modal2').dialog({title: "RSS"});
+	$('#md_modal2').load('index.php?v=d&plugin=rss&modal=modal.rss&lien='+lien_rss).dialog('open');
+	}
+	//$(".rss_feed[data-eqLogic_uid=#uid#] ul").attr('style', 'width: 100% !;z-index:1 !important');
+	</script>
+</div>
