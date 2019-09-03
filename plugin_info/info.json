@@ -3,9 +3,7 @@
 	"name" : "Rss",
 	"description" : "Voir les flux RSS d'un site web ou de plusieurs site via votre dashboard",
 	"licence" : "AGPL",
-	"author" : "Rocket13011",
-	"require" : "3.0",
-	"category" : "communication",
-	"changelog" : "https://github.com/jeedom/plugin-rss/blob/stable/doc/#language#/changelog.asciidoc",
-	"documentation" : "https://github.com/jeedom/plugin-rss/blob/stable/doc/#language#/index.asciidoc"
+	"author" : "Zyg0m4t1k",
+	"require" : "3.3.24",
+	"category" : "communication"
 }
