@@ -17,7 +17,7 @@
  */
 
 /* * ***************************Includes********************************* */
-require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
+require_once __DIR__ . '/../../../../core/php/core.inc.php';
 include_file('3rdparty','rss/rsslib','php','rss');
 $RSS_Content = array();
 class rss extends eqLogic {
@@ -34,16 +34,21 @@ class rss extends eqLogic {
 		log::add('rss','debug','/*                                                */');
 		log::add('rss','debug','/**************************************************/');
 		
-		$lien_dossier = realpath(dirname(__FILE__) . '/../../flux_rss');
+		$lien_dossier = __DIR__ . '/../../flux_rss';
+		if (!is_dir($lien_dossier)) {
+				com_shell::execute(system::getCmdSudo() . 'mkdir ' . __DIR__ . '/../../flux_rss' . ' > /dev/null 2>&1;');
+				com_shell::execute(system::getCmdSudo() . 'chmod 777 -R ' . __DIR__ . '/../../flux_rss' . ' > /dev/null 2>&1;');
+		} else {
+			com_shell::execute(system::getCmdSudo() . 'chmod 777 -R ' . __DIR__ . '/../../flux_rss' . ' > /dev/null 2>&1;');
+		}
 		log::add('rss','debug','Lien du dossier RSS :'.$lien_dossier);
-		
 		$handle=opendir($lien_dossier.'/'); 
 			while (false !== ($fichier = readdir($handle))) { 
 				if (($fichier != ".") && ($fichier != "..")) { 
 					unlink($lien_dossier.'/'.$fichier); 
 				} 
 			} 
-			
+		
 		log::add('rss','debug','////////////////////////////////////////////////////');
 		foreach (rss::byType('rss') as $rss_plugin) {
 			log::add('rss','debug','params :'. $rss_plugin->getId() );
@@ -258,7 +263,7 @@ class rss extends eqLogic {
 		}
 		$version = jeedom::versionAlias($_version);		
 		
-		$lien_dossier = realpath(dirname(__FILE__) . '/../../flux_rss');
+		$lien_dossier = realpath(__DIR__ . '/../../flux_rss');
 		$li = null;
 		$lienfor = $lien_dossier.'/fluxrss_'.$this->getId().'.json';
 		
